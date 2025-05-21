@@ -1,0 +1,181 @@
+/* ==========================
+   COMMON VARIABLES & STYLES
+   ========================== */
+
+   :root {
+    /* COLOR VARIABLES (Customize per residence in specific CSS) */
+    --primary-color: #0a192f; /* Dark Blue */
+    --secondary-color: #a0852a;
+    --dark-text-color: #2c3e50;
+    --light-text-color: #d4af37;
+    --background-color: #f8f8f8;
+    --button-color: #d4af37;
+    --button-text-color: #0a192f;
+
+
+    
+    /* TYPOGRAPHY */
+    --font-body: 'DejaVu', sans-serif;
+    --font-size: 16px;
+    
+    /* SPACING & LAYOUT */
+    --section-padding: 50px 20px;
+    --max-width: 1200px;
+}
+
+@font-face {
+    font-family: 'DejaVu';
+    src: url('fonts/DejaVuSans.ttf') format('truetype'),
+         url('fonts/DejaVuSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================
+   GENERAL STYLES
+   ========================== */
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--dark-text-color);
+}
+
+/* ==========================
+   HEADER & NAVIGATION
+   ========================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+.logo img {
+    height: 60px;
+}
+
+a:hover {
+    /* background-color: gold; */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+
+    /* background: var(--hero-bg, url('img/Esterni.png')) no-repeat center center/cover; */
+    color: var(--light-text-color);
+
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ==========================
+   SECTIONS
+   ========================== */
+
+section {
+    padding: var(--section-padding);
+    text-align: center;
+    background-color: white;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-1 {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr;
+}
+
+.row-2 {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr;
+}
+
+img {
+    width: 100%;
+    /* margin: 20px; */
+}
+
+/* ==========================
+   CONTACT FORM
+   ========================== */
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px;
+    background: var(--button-color);
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
