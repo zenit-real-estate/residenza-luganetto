@@ -106,8 +106,8 @@ nav ul li a:hover {
 .hero {
     height: 100vh;
     min-height: 700px;
-    background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.5)), 
-                url('static/img/Esterni.png') center/cover no-repeat;
+    /* background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.5)), 
+                url("/static/img/Esterni.png") center/cover no-repeat; */
     display: flex;
     flex-direction: column;
     justify-content: center;

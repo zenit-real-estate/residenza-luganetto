@@ -7,6 +7,7 @@ import Location from './components/Location';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import esterniImg from '/static/img/Esterni.png';
 import './App.css';
 import './index.css';
 
