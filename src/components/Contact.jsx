@@ -54,7 +54,7 @@ const Contact = () => {
               <a 
                 href="/static/Luganetto_Palazzina_Presentazione_Prezzi_2025.pdf" 
                 className="download-button"
-                download="Residenza_Luganetto_Brochure_2025.pdf"
+                download="Luganetto_Palazzina_Presentazione_Prezzi_2025.pdf"
               >
                 <FaDownload /> SCARICA LA BROCHURE COMPLETA
               </a>
