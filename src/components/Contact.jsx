@@ -40,8 +40,7 @@ const Contact = () => {
           <div className="contact-info">
             <h3>PER INFORMAZIONI E VISITE</h3>
             <p><FaPhone /> <a href="tel:+41787461996">+41 78 746 19 96</a></p>
-            {/* TO DO - COMMENT OUT ON PRODUCTION <p><FaEnvelope /> <a href="mailto:info@residenzaluganetto.com">info@residenzaluganetto.com</a></p> */}
-            <p><FaEnvelope /> <a href="mailto:enricobenedettini@gmail.com">enricobenedettini@gmail.com</a></p>
+            TO DO - COMMENT OUT ON PRODUCTION <p><FaEnvelope /> <a href="mailto:info@residenzaluganetto.com">info@residenzaluganetto.com</a></p>
             <p><FaMapMarkerAlt /> Via Luganetto 3, 6900 Lugano</p>
             
             <div className="social-links">
