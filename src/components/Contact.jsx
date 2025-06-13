@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaDownload, FaPaperPlane } from 'react-icons/fa';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { toast } from 'react-hot-toast';
@@ -59,6 +60,7 @@ const Contact = () => {
               <a href="https://www.facebook.com/ZenitRealEstateFiduciariaImmobiliare/" target='_blank'><FaFacebookF /></a>
               <a href="https://www.instagram.com/zenitrealestate/" target='_blank'><FaInstagram /></a>
               <a href="https://www.linkedin.com/company/zenit-real-estate/" target='_blank'><FaLinkedinIn /></a>
+              <a href="https://x.com/zenitrealestate" target='_blank'><FaXTwitter /></a>
             </div>
             
             <div className="brochure-download">
