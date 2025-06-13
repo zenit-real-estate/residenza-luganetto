@@ -1,33 +1,45 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaDownload, FaPaperPlane } from 'react-icons/fa';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { toast } from 'react-hot-toast';
 
 const Contact = () => {
   const form = useRef();
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [recaptchaError, setRecaptchaError] = useState('');
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+    setRecaptchaError('');
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!recaptchaToken) {
+      setRecaptchaError('Per favore completa il CAPTCHA.');
+      return;
+    }
 
     const now = new Date();
 
     const serviceID = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
     const templateID = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
-    // const date_and_time = {
-    //   date: now.toLocaleDateString(),
-    //   time: now.toLocaleTimeString()
-    // }
-    // console.log(date_and_time.date)
     emailjs.sendForm(serviceID, templateID, form.current, publicKey, {
       date: now.toLocaleDateString(),
-      time: now.toLocaleTimeString()
+      time: now.toLocaleTimeString(),
+      'g-recaptcha-response': recaptchaToken
     })
       .then((result) => {
-        alert('Messaggio inviato con successo!');
+        toast.success('Messaggio inviato con successo!');
         e.target.reset();
+        setRecaptchaToken(null);
+        setRecaptchaError('');
       }, (error) => {
-        alert('Errore nell\'invio del messaggio. Riprova più tardi.');
+        toast.error('Errore nell\'invio del messaggio. Riprova più tardi.');
         console.error('EmailJS error:', error);
       });
   };
@@ -93,6 +105,16 @@ const Contact = () => {
               
               <div className="form-group">
                 <textarea name="message" placeholder="Messaggio*" required></textarea>
+              </div>
+              
+              <div className="form-group">
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={handleRecaptchaChange}
+                />
+                {recaptchaError && (
+                  <div style={{ color: 'red', marginTop: '0.5rem' }}>{recaptchaError}</div>
+                )}
               </div>
               
               <div className="form-group">
