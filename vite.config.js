@@ -10,9 +10,6 @@ export default defineConfig({
     }
   },
   server: {
-    headers: {
-      "Content-Disposition": "attachment"
-    },
     port: 5173,
     strictPort: true,
     open: true
