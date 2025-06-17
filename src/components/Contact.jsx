@@ -62,7 +62,7 @@ const Contact = () => {
               <a href="https://www.instagram.com/zenitrealestate/" target='_blank' aria-label="Visit our Instagram profile"><FaInstagram /></a>
               <a href="https://www.linkedin.com/company/zenit-real-estate/" target='_blank' aria-label="Visit our LinkedIn profile"><FaLinkedinIn /></a>
               <a href="https://x.com/zenitrealestate" target='_blank' aria-label="Visit our X (Twitter) profile"><FaXTwitter /></a>
-              <a href="https://maps.app.goo.gl/your-google-business-profile-link" target='_blank' aria-label="Visit our Google Business Profile"><FaGoogle /></a>
+              <a href="https://g.co/kgs/6eawv9h" target='_blank' aria-label="Visit our Google Business Profile"><FaGoogle /></a>
             </div>
             
             <div className="brochure-download">
