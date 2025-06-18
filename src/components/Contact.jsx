@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaDownload, FaPaperPlane } from 'react-icons/fa';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { FaGoogle } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { toast } from 'react-hot-toast';
@@ -58,11 +56,9 @@ const Contact = () => {
             <p><FaMapMarkerAlt /> Via Luganetto 3, 6900 Lugano</p>
             
             <div className="social-links">
-              <a href="https://www.facebook.com/ZenitRealEstateFiduciariaImmobiliare/" target='_blank' aria-label="Visit our Facebook profile"><FaFacebookF /></a>
-              <a href="https://www.instagram.com/zenitrealestate/" target='_blank' aria-label="Visit our Instagram profile"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/company/zenit-real-estate/" target='_blank' aria-label="Visit our LinkedIn profile"><FaLinkedinIn /></a>
-              <a href="https://x.com/zenitrealestate" target='_blank' aria-label="Visit our X (Twitter) profile"><FaXTwitter /></a>
-              <a href="https://g.co/kgs/6eawv9h" target='_blank' aria-label="Visit our Google Business Profile"><FaGoogle /></a>
+              <a href="https://www.facebook.com/ZenitRealEstateFiduciariaImmobiliare/" target='_blank'><FaFacebookF /></a>
+              <a href="https://www.instagram.com/zenitrealestate/" target='_blank'><FaInstagram /></a>
+              <a href="https://www.linkedin.com/company/zenit-real-estate/" target='_blank'><FaLinkedinIn /></a>
             </div>
             
             <div className="brochure-download">
